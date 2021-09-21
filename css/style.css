@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+
+
+}
+
+
+/* Header et menu ===> lien de navigation */
+
+header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 50px;
+    z-index: 200;
+}
+
+header>div {
+    display: flex;
+}
+
+header>div>img {
+    margin-right: 75px;
+    transform: translateY(2px);
+}
+
+header div>ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+}
+
+header div>ul>li>a {
+    color: white;
+    list-style: none;
+    font-family: overpass;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+header div>ul>li {
+    position: relative;
+    list-style: none;
+    margin-right: 75px;
+    transition: ease 1s;
+
+
+}
+
+.lienHeader {
+    position: absolute;
+    left: 0;
+
+    background-color: white;
+    width: 150px;
+    display: none;
+    opacity: 0;
+
+}
+
+.lienHeader>li {
+    list-style: none;
+    color: grey;
+    font-family: ubuntu;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px;
+    transition: ease 10s;
+}
+
+header div>ul>li:hover .lienHeader,
+.lienHeader:hover {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Premiére section Hero Header */
+
+.headerTitre {
+    width: 100%;
+    background: linear-gradient(135deg, hsl(13, 100%, 64%) 0%, hsl(353, 100%, 62%) 100%);
+    position: relative;
+    margin: auto;
+    border-radius: 0 0 0 100px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.headerTitre h1 {
+    font-family: ubuntu;
+    font-size: 50px;
+    color: white;
+    font-weight: 300;
+    padding-top: 250px;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+.headerTitre h2 {
+    font-family: overpass;
+    font-size: 16px;
+    color: white;
+    font-weight: 100;
+
+    text-align: center;
+
+}
+
+.headerTitre div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 150px;
+
+}
+
+.headerTitre div a {
+    padding: 12px 17px;
+    font-family: ubuntu;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    border: white 1px solid;
+    border-radius: 25px;
+    margin: 10px;
+    transition: ease 0.5s;
+}
+
+.headerTitre div a:nth-of-type(1) {
+    color: hsl(353, 100%, 62%);
+    background-color: white;
+}
+
+.headerTitre div a:nth-of-type(1):hover {
+    border-color: hsl(353, 100%, 62%);
+    color: white;
+    background-color: hsl(353, 100%, 62%);
+}
+
+.headerTitre div a:nth-of-type(2) {
+    color: white;
+}
+
+.headerTitre div a:nth-of-type(2):hover {
+    border-color: white;
+    color: hsl(353, 100%, 62%);
+    background-color: white;
+}
+
+.headerTitre img {
+    position: absolute;
+    left: -400px;
+    width: 160%;
+    z-index: -2;
+    top: -180%;
+}
