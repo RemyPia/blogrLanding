@@ -25,49 +25,54 @@ header {
     z-index: 200;
 }
 
-header>div {
+header>nav {
     display: flex;
 }
 
-header>div>img {
+header>nav>img {
     margin-right: 75px;
     transform: translateY(2px);
 }
 
-header div>ul {
+header nav>ul {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
 
 }
 
-header div>ul>li>a {
+header nav>ul>li>a {
     color: white;
     list-style: none;
-    font-family: overpass;
+    font-family: ubuntu;
+    font-weight: 700;
     font-size: 16px;
     text-decoration: none;
+    margin-right: 5px;
 
 }
 
-header div>ul>li {
+header nav>ul>li {
     position: relative;
     list-style: none;
     margin-right: 75px;
     transition: ease 1s;
 
+}
 
+header nav>ul>li:hover {
+    text-decoration: underline white;
 }
 
 .lienHeader {
     position: absolute;
     left: 0;
-
+    transition: ease 10s;
     background-color: white;
     width: 150px;
-    display: none;
-    opacity: 0;
 
+    opacity: 0;
+    transition: ease 0.5s;
 }
 
 .lienHeader>li {
@@ -77,18 +82,32 @@ header div>ul>li {
     font-size: 14px;
     font-weight: 500;
     margin: 15px;
-    transition: ease 10s;
+    transition: 0.3s ease;
+
 }
 
-header div>ul>li:hover .lienHeader,
+header nav>ul>li:hover .lienHeader,
 .lienHeader:hover {
-    display: block;
+
     opacity: 1;
     cursor: pointer;
 }
 
+header>div:nth-of-type(1)>a:nth-of-type(1) {
+    padding: 12px 12px;
+    font-family: ubuntu;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    margin: 10px;
 
+}
 
+.lienHeader>li:hover {
+    color: black;
+    font-size: 16px;
+}
 
 
 /* Premiére section Hero Header */
@@ -133,10 +152,11 @@ header div>ul>li:hover .lienHeader,
 
 }
 
-.headerTitre div a {
-    padding: 12px 17px;
+.headerTitre div a,
+.button1 {
+    padding: 12px 18px;
     font-family: ubuntu;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
     border: white 1px solid;
@@ -145,7 +165,7 @@ header div>ul>li:hover .lienHeader,
     transition: ease 0.5s;
 }
 
-.headerTitre div a:nth-of-type(1) {
+.button1 {
     color: hsl(353, 100%, 62%);
     background-color: white;
 }
