@@ -15,7 +15,9 @@
 
 <body>
   <header>
-    <nav><img src="images/logo.svg" alt="">
+    <img src="images/logo.svg" alt="">
+    <img  src="/blogr-landing-page-main/images/icon-hamburger.svg" alt="">
+    <nav>
       <ul>
 
         <li> <a href="#"> Product</a> <img src="images/icon-arrow-light.svg" alt="">
@@ -45,11 +47,42 @@
           </ul>
         </li>
       </ul>
-    </nav>
-    <div>
+      <div>
       <a href="#">Login</a>
       <a href="#" class="button1">Sign Up</a>
     </div>
+    </nav>
+    
+
+<div class="mobileNav">
+  <div>
+      <button class="accordion">Product</button>
+<div class="panel">
+ <a href="#">Overview</a>
+ <a href="#">Pricing</a>
+ <a href="#">Marketplace</a>
+ <a href="#">Features</a>
+ <a href="#">Integrations</a>
+</div>
+</div>
+
+<div>
+      <button class="accordion">Company</button>
+<div class="panel">
+ <a href="#">About</a>
+ <a href="#">Team</a>
+ <a href="#">Blog</a>
+ <a href="#">Careers</a>
+</div></div>
+
+<div>
+      <button class="accordion">Connect</button>
+<div class="panel">
+ <a href="#">Contact</a>
+ <a href="#">Newsletter</a>
+ <a href="#">Linkedin</a>
+</div></div>
+</div>
 
   </header>
 
@@ -83,32 +116,85 @@
 
     <section>
       <img src="images/illustration-phones.svg" alt="">
-      
-        <div>
-          <h3>  State of the Art Infrastructure
-</h3>
-          <p>  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.   This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
 
-</p>
-        </div>
-      
+      <div>
+        <h3> State of the Art Infrastructure
+        </h3>
+        <p> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+
+        </p>
+      </div>
+
     </section>
 
     <section>
-      <img src="images/illustration-laptop-desktop.svg" alt="">
-      <div>
-        <h3>  Free, open, simple</h3>
-        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+      <img class="freeOpenImg" src="images/illustration-laptop-desktop.svg" alt="">
+      <div class="freeOpen">
+        <h3> Free, open, simple</h3>
+        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
         <h3> Powerful tooling</h3>
-        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.</p>
+        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+          breeze, but
+          capable of producing even the most complicated sites.</p>
       </div>
     </section>
   </main>
+  <footer>
+    <div>
+    <img src="images/logo.svg" alt="">
+</div>
+    <div>
+
+      <h4> Product </h4>
+       
+      <a href=""> Overview</a>
+      <a href=""> Pricing </a>
+      <a href=""> Marketplace</a>
+      <a href=""> Features</a>
+      <a href=""> Integrations</a>
+    </div>
+
+    <div>
+
+      <h4> Company</h4>
+
+      <a href=""> About </a>
+      <a href=""> Team About</a>
+      <a href=""> Blog </a>
+      <a href=""> Careers Team</a>
+    </div>
+
+    <div>
+
+      <h4>  Connect</h4>
+
+      <a href=""> Blog</a>
+      <a href="">  Newsletter</a>
+      <a href=""> Careers</a>
+    </div>
 
 
+  </footer>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </body>
+
 
 </html>
